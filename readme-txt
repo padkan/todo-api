@@ -1,0 +1,15 @@
+npm i express
+npm i -D typescript @types/express @types/node
+tsc --init
+
+tsc
+
+npm i dotenv
+npm i -D nodemon ts-node
+
+npm i eslint --save-dev
+npx eslint --init
+
+npm install typeorm reflect-metadata mysql2
+
+npm i cors @types/cors body-parser  //to enable to access from other server
