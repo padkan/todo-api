@@ -5,8 +5,8 @@ import { TasksController } from './tasks.controller';
 
 export const taskRouter: Router = Router();
 
-taskRouter.get('/tasks', (req: Request, res: Response) => {
+taskRouter.get('/tasks', async (req: Request, res: Response) => {
   const taskController = new TasksController();
-  taskController.getAll();
-  res.send('Express + Typescript server');
+  const allTasks = await taskController.getAll();
+  res.json(allTasks).status(200);
 });
